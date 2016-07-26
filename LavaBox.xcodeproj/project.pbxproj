@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		840239ED1D4749F10078DF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840239EC1D4749F10078DF0D /* AppDelegate.swift */; };
+		840239EF1D4749F10078DF0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840239EE1D4749F10078DF0D /* ViewController.swift */; };
+		840239F11D4749F10078DF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840239F01D4749F10078DF0D /* Assets.xcassets */; };
+		840239F41D4749F10078DF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840239F21D4749F10078DF0D /* Main.storyboard */; };
+		840239FF1D4749F10078DF0D /* LavaBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840239FE1D4749F10078DF0D /* LavaBoxTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		840239FB1D4749F10078DF0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840239E11D4749F10078DF0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 840239E81D4749F10078DF0D;
+			remoteInfo = LavaBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		840239E91D4749F10078DF0D /* LavaBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LavaBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		840239EC1D4749F10078DF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		840239EE1D4749F10078DF0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		840239F01D4749F10078DF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		840239F31D4749F10078DF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		840239F51D4749F10078DF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840239FA1D4749F10078DF0D /* LavaBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LavaBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		840239FE1D4749F10078DF0D /* LavaBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaBoxTests.swift; sourceTree = "<group>"; };
+		84023A001D4749F10078DF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		840239E61D4749F10078DF0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840239F71D4749F10078DF0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		840239E01D4749F10078DF0D = {
+			isa = PBXGroup;
+			children = (
+				840239EB1D4749F10078DF0D /* LavaBox */,
+				840239FD1D4749F10078DF0D /* LavaBoxTests */,
+				840239EA1D4749F10078DF0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		840239EA1D4749F10078DF0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				840239E91D4749F10078DF0D /* LavaBox.app */,
+				840239FA1D4749F10078DF0D /* LavaBoxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		840239EB1D4749F10078DF0D /* LavaBox */ = {
+			isa = PBXGroup;
+			children = (
+				840239EC1D4749F10078DF0D /* AppDelegate.swift */,
+				840239EE1D4749F10078DF0D /* ViewController.swift */,
+				840239F01D4749F10078DF0D /* Assets.xcassets */,
+				840239F21D4749F10078DF0D /* Main.storyboard */,
+				840239F51D4749F10078DF0D /* Info.plist */,
+			);
+			path = LavaBox;
+			sourceTree = "<group>";
+		};
+		840239FD1D4749F10078DF0D /* LavaBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				840239FE1D4749F10078DF0D /* LavaBoxTests.swift */,
+				84023A001D4749F10078DF0D /* Info.plist */,
+			);
+			path = LavaBoxTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		840239E81D4749F10078DF0D /* LavaBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84023A031D4749F10078DF0D /* Build configuration list for PBXNativeTarget "LavaBox" */;
+			buildPhases = (
+				840239E51D4749F10078DF0D /* Sources */,
+				840239E61D4749F10078DF0D /* Frameworks */,
+				840239E71D4749F10078DF0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LavaBox;
+			productName = LavaBox;
+			productReference = 840239E91D4749F10078DF0D /* LavaBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		840239F91D4749F10078DF0D /* LavaBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84023A061D4749F10078DF0D /* Build configuration list for PBXNativeTarget "LavaBoxTests" */;
+			buildPhases = (
+				840239F61D4749F10078DF0D /* Sources */,
+				840239F71D4749F10078DF0D /* Frameworks */,
+				840239F81D4749F10078DF0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				840239FC1D4749F10078DF0D /* PBXTargetDependency */,
+			);
+			name = LavaBoxTests;
+			productName = LavaBoxTests;
+			productReference = 840239FA1D4749F10078DF0D /* LavaBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		840239E11D4749F10078DF0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "David Fearon";
+				TargetAttributes = {
+					840239E81D4749F10078DF0D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					840239F91D4749F10078DF0D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 840239E81D4749F10078DF0D;
+					};
+				};
+			};
+			buildConfigurationList = 840239E41D4749F10078DF0D /* Build configuration list for PBXProject "LavaBox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 840239E01D4749F10078DF0D;
+			productRefGroup = 840239EA1D4749F10078DF0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				840239E81D4749F10078DF0D /* LavaBox */,
+				840239F91D4749F10078DF0D /* LavaBoxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		840239E71D4749F10078DF0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840239F11D4749F10078DF0D /* Assets.xcassets in Resources */,
+				840239F41D4749F10078DF0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840239F81D4749F10078DF0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		840239E51D4749F10078DF0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840239EF1D4749F10078DF0D /* ViewController.swift in Sources */,
+				840239ED1D4749F10078DF0D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840239F61D4749F10078DF0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840239FF1D4749F10078DF0D /* LavaBoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		840239FC1D4749F10078DF0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 840239E81D4749F10078DF0D /* LavaBox */;
+			targetProxy = 840239FB1D4749F10078DF0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		840239F21D4749F10078DF0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840239F31D4749F10078DF0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84023A011D4749F10078DF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84023A021D4749F10078DF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84023A041D4749F10078DF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LavaBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidfearon.LavaBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84023A051D4749F10078DF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LavaBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidfearon.LavaBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		84023A071D4749F10078DF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LavaBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidfearon.LavaBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LavaBox.app/Contents/MacOS/LavaBox";
+			};
+			name = Debug;
+		};
+		84023A081D4749F10078DF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LavaBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidfearon.LavaBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LavaBox.app/Contents/MacOS/LavaBox";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		840239E41D4749F10078DF0D /* Build configuration list for PBXProject "LavaBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84023A011D4749F10078DF0D /* Debug */,
+				84023A021D4749F10078DF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84023A031D4749F10078DF0D /* Build configuration list for PBXNativeTarget "LavaBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84023A041D4749F10078DF0D /* Debug */,
+				84023A051D4749F10078DF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84023A061D4749F10078DF0D /* Build configuration list for PBXNativeTarget "LavaBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84023A071D4749F10078DF0D /* Debug */,
+				84023A081D4749F10078DF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 840239E11D4749F10078DF0D /* Project object */;
+}
