@@ -17,7 +17,7 @@ class ViewController: NSViewController
         
         box.calibrateForMeasuredEnergyLoss(energyLoss: 38469, time: 600, externalTemperature: 27.4, internalTemperature: 60)
         
-        let powerLoss = box.powerLoss(internalTemperature: 60, externalTemperature: 27.4)
+        let powerLoss = box.powerLoss(internalTemperature: 70, externalTemperature: 27.4)
         
         print(powerLoss)
     }

@@ -41,10 +41,10 @@ class Container
     
     init(externalLength : Float, externalWidth : Float, externalHeight : Float, wallThickness : Float, thermalConductivity : Float)
     {
-        self.externalLength =  externalLength
-        self.externalWidth =   externalWidth
-        self.externalHeight =  externalHeight
-        self.wallThickness = wallThickness
+        self.externalLength = externalLength
+        self.externalWidth =  externalWidth
+        self.externalHeight = externalHeight
+        self.wallThickness =  wallThickness
         self.thermalConductivity = thermalConductivity
     }
     
