@@ -61,7 +61,7 @@ class Container
     
     func powerLoss(internalTemperature : Float, externalTemperature : Float) -> Float
     {
-        // Return Q/t = kA(T1 - T2)/d = kA / d * (T1 - T2)
+        // Return Q/t = kA(T1 - T2)/d = kA / d * (T1 - T2), compensated for by empirical fudge factor
         return self.kAByD * (internalTemperature - externalTemperature) * self.fudgeFactor
     }
 }
