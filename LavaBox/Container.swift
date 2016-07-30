@@ -18,10 +18,16 @@ class Container
     
     /*
      The thermal conduction equation: Q/t = kA(T1 - T2)/d relies on what is effectively the
-     constant kA/d. Fudge factor is a coefficient that nudges the value of kA/d to match
-     empirically derived values.
+     constant kA/d (a constant for any given container). Fudge factor is a coefficient that 
+     nudges the value of kA/d to match empirically derived values, 
+     set via the calibrateForMeasuredEnergyLoss() function.
      */
     private var fudgeFactor : Float = 1
+    
+    private var kAByD : Float
+    {
+        return self.thermalConductivity * self.surfaceArea / self.wallThickness
+    }
     
     private var volume : Float
     {
@@ -42,8 +48,20 @@ class Container
         self.thermalConductivity = thermalConductivity
     }
     
-    func calibrateForEnergyLoss(energyLoss : Float, time : TimeInterval, externalTemperature : Float, internalTemperature : Float)
+    func calibrateForMeasuredEnergyLoss(energyLoss : Float, time : TimeInterval, externalTemperature : Float, internalTemperature : Float)
     {
+        let empiricalPowerLoss = energyLoss / Float(time);
         
+        let calculatedPowerLoss = self.powerLoss(internalTemperature: internalTemperature, externalTemperature: externalTemperature)
+        
+        let fudgeFactor = empiricalPowerLoss / calculatedPowerLoss
+        
+        self.fudgeFactor = fudgeFactor
+    }
+    
+    func powerLoss(internalTemperature : Float, externalTemperature : Float) -> Float
+    {
+        // Return Q/t = kA(T1 - T2)/d = kA / d * (T1 - T2)
+        return self.kAByD * (internalTemperature - externalTemperature) * self.fudgeFactor
     }
 }
