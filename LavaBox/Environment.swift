@@ -10,5 +10,10 @@ import Cocoa
 
 class Environment
 {
-
+    let ambientTemperature : Float
+    
+    init(ambientTemperature : Float)
+    {
+        self.ambientTemperature = ambientTemperature
+    }
 }
