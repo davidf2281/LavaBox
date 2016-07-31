@@ -15,7 +15,6 @@ class ViewController: NSViewController
     required init?(coder: NSCoder)
     {
         self.plotView = PlotView(frame: NSRect(x: 0, y: 0, width: 0, height: 0))
-
         super.init(coder: coder)
     }
     
@@ -23,12 +22,12 @@ class ViewController: NSViewController
     {
         addPlotView()
         
-        //**********************
+        //********************************************
         let ambientTemperature : Celsius      = 20
         let initialWaterTemperature : Celsius = 60
         let targetWaterTemperature : Celsius  = 57.5
         let heaterPower : Watts = 100;
-        //**********************
+        //********************************************
         
         let waterBody = WaterBody(length: 0.36, width: 0.26, height: 0.13, initialTemperature: initialWaterTemperature)
         
@@ -43,7 +42,7 @@ class ViewController: NSViewController
         
         let simulator = Simulator(container: box, waterBody: waterBody, heater: heater, heaterController: heaterController)
         
-        let results = simulator.simulate(timeStep: 1, duration: 60 * 60 * 5, externalTemperature: ambientTemperature)
+        let results = simulator.simulate(timeStep: 1, duration: 60 * 60 * 2, externalTemperature: ambientTemperature)
         
         self.plotView.simulationResults = results
     }
@@ -56,9 +55,8 @@ class ViewController: NSViewController
         
         let views = ["plotView" : self.plotView]
         
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[plotView]|", options:NSLayoutFormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[plotView]|", options:NSLayoutFormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
-
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[plotView]-(200)-|", options:NSLayoutFormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[plotView]-(75)-|", options:NSLayoutFormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
     }
 }
 
