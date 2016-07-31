@@ -24,9 +24,9 @@ class ViewController: NSViewController
         
         //********************************************
         let ambientTemperature : Celsius      = 20
-        let initialWaterTemperature : Celsius = 60
+        let initialWaterTemperature : Celsius = 18
         let targetWaterTemperature : Celsius  = 57.5
-        let heaterPower : Watts = 100;
+        let heaterPower : Watts = 800;
         //********************************************
         
         let waterBody = WaterBody(length: 0.36, width: 0.26, height: 0.13, initialTemperature: initialWaterTemperature)

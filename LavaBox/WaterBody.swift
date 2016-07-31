@@ -18,7 +18,6 @@ class WaterBody
     
     private let density : KilogramsPerCubicMetre = 1000
     
-    
     private let specificHeatCapacity : JoulesPerKilogramKelvin = 4181
 
     private var volume : CubicMetres

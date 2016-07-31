@@ -16,7 +16,9 @@ protocol SimulatorUpdateDelegate
 class Simulator
 {
     private let container : Container
+    
     private let waterBody : WaterBody
+    
     private let heater    : Heater
  
     var delegate : SimulatorUpdateDelegate
@@ -29,51 +31,50 @@ class Simulator
         delegate = heaterController
     }
     
-    func simulate(timeStep : TimeInterval, duration : TimeInterval, externalTemperature : Celsius) -> [TemperatureDataPoint]
+    func simulate(timeStep : TimeInterval, duration : TimeInterval, externalTemperature : Celsius) -> SimulationResults
     {
-        var results = [TemperatureDataPoint]()
+        var results = SimulationResults()
         
-        self.heater.switchOn()
-
         var currentTime : TimeInterval = 0
         
         var temperatureAveragingAccumulator : Celsius = 0
         
         var loops : Int = 0
         
+        self.heater.switchOn()
+
         while (currentTime < duration)
         {
-            // 1: Calculate notional temperature of water for given input energy with no losses
+            // 1: Calculate notional temperature change of water for given input energy with no losses
             let heaterOutput = self.heater.currentOutputPower
             let inputEnergy = heaterOutput * timeStep
             let temperatureChangeForEnergyInput = self.waterBody.temperatureChangeForInputEnergy(inputEnergy: inputEnergy)
             
-            // 2: Calculate energy lost to environment for given average temperature change for this timestep
+            // 2: Calculate energy lost to environment for given notional average temperature change
             let averageTemperature = self.waterBody.temperature + (temperatureChangeForEnergyInput / 2)
             let powerLoss = self.container.powerLoss(internalTemperature:averageTemperature, externalTemperature: externalTemperature)
             let energyLoss = powerLoss * timeStep
             
             // 3: Set water temperature for overall net energy input
             let netInputEnergy = inputEnergy - energyLoss
-            let overallTemperatureChange = self.waterBody.temperatureChangeForInputEnergy(inputEnergy: netInputEnergy)
-            let finalTemperature = self.waterBody.temperature + overallTemperatureChange
+            let finalTemperatureChange = self.waterBody.temperatureChangeForInputEnergy(inputEnergy: netInputEnergy)
+            let finalTemperature = self.waterBody.temperature + finalTemperatureChange
             self.waterBody.temperature = finalTemperature
             
             // 4: Record our data point
             results.append(TemperatureDataPoint(time: currentTime, temperature: finalTemperature))
             
-            // 5: Inform heater of current time and water temperature
+            // 5: Inform heater controller of water temperature and time update
             self.delegate.simulatorDidUpdateSimulationWithWaterTemperature(temperature: self.waterBody.temperature, time: currentTime)
             
-            temperatureAveragingAccumulator += finalTemperature
+            // 6: Prepare for next iteration
             loops += 1
-            
+            temperatureAveragingAccumulator += finalTemperature
             currentTime = currentTime + timeStep
         }
 
         print("Final temperature: \(self.waterBody.temperature)")
         print("Average temperature: \(temperatureAveragingAccumulator / Double(loops))")
-
         
         self.heater.switchOff() // We mustn't waste energy
         
