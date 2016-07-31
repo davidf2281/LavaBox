@@ -10,4 +10,27 @@ import Cocoa
 
 class Heater
 {
+    var maxOutputPower : Watts
+    
+    var on : Bool = false
+    
+    init(maxOutputPower : Watts)
+    {
+        self.maxOutputPower = maxOutputPower
+    }
+    
+    func switchOn()
+    {
+        self.on = true
+    }
+    
+    func switchOff()
+    {
+        self.on = false
+    }
+    
+    func currentOuputPower() -> Watts
+    {
+        return self.on ? self.maxOutputPower : 0
+    }
 }

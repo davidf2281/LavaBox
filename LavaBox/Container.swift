@@ -13,8 +13,9 @@ class Container
     private let externalLength,
                 externalWidth,
                 externalHeight,
-                wallThickness,
-                thermalConductivity : Float
+                wallThickness : Metres
+    
+    private let thermalConductivity : Double
     
     /*
      The thermal conduction equation: Q/t = kA(T1 - T2)/d relies on what is effectively the
@@ -22,24 +23,24 @@ class Container
      nudges the value of kA/d to match empirically derived values, 
      set via the calibrateForMeasuredEnergyLoss() function.
      */
-    private var fudgeFactor : Float = 1
+    private var fudgeFactor : Double = 1
     
-    private var kAByD : Float
+    private var kAByD : Double
     {
         return self.thermalConductivity * self.surfaceArea / self.wallThickness
     }
     
-    private var volume : Float
+    private var volume : CubicMetres
     {
         return externalLength * externalWidth * externalHeight
     }
 
-    internal var surfaceArea : Float
+    private var surfaceArea : SquareMetres
     {
         return (externalLength * externalWidth * 2) + (externalLength * externalHeight * 2) + (externalWidth * externalHeight * 2)
     }
     
-    init(externalLength : Float, externalWidth : Float, externalHeight : Float, wallThickness : Float, thermalConductivity : Float)
+    init(externalLength : Metres, externalWidth : Metres, externalHeight : Metres, wallThickness : Metres, thermalConductivity : Double)
     {
         self.externalLength = externalLength
         self.externalWidth =  externalWidth
@@ -48,9 +49,9 @@ class Container
         self.thermalConductivity = thermalConductivity
     }
     
-    func calibrateForMeasuredEnergyLoss(energyLoss : Float, time : TimeInterval, externalTemperature : Float, internalTemperature : Float)
+    func calibrateForMeasuredEnergyLoss(energyLoss : Joules, time : TimeInterval, externalTemperature : Celsius, internalTemperature : Celsius)
     {
-        let empiricalPowerLoss = energyLoss / Float(time);
+        let empiricalPowerLoss = energyLoss / time;
         
         let calculatedPowerLoss = self.powerLoss(internalTemperature: internalTemperature, externalTemperature: externalTemperature)
         
@@ -59,7 +60,7 @@ class Container
         self.fudgeFactor = fudgeFactor
     }
     
-    func powerLoss(internalTemperature : Float, externalTemperature : Float) -> Float
+    func powerLoss(internalTemperature : Celsius, externalTemperature : Celsius) -> Watts
     {
         // Return Q/t = kA(T1 - T2)/d = kA / d * (T1 - T2), compensated for by empirical fudge factor
         return self.kAByD * (internalTemperature - externalTemperature) * self.fudgeFactor
