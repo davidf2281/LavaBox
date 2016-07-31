@@ -23,20 +23,27 @@ class ViewController: NSViewController
     {
         addPlotView()
         
-        let ambientTemperature : Celsius = 20
+        //**********************
+        let ambientTemperature : Celsius      = 20
+        let initialWaterTemperature : Celsius = 60
+        let targetWaterTemperature : Celsius  = 57.5
+        let heaterPower : Watts = 100;
+        //**********************
         
-        let waterBody = WaterBody(length: 0.36, width: 0.26, height: 0.13, initialTemperature: 25)
+        let waterBody = WaterBody(length: 0.36, width: 0.26, height: 0.13, initialTemperature: initialWaterTemperature)
         
         let box = Container(externalLength: 0.4, externalWidth: 0.297, externalHeight: 0.283, wallThickness: 0.02, thermalConductivity: 0.03)
         
-        let heater = Heater(maxOutputPower: 100)
+        let heater = Heater(maxOutputPower: heaterPower)
+        
+        let heaterController = HeaterController(heater: heater, temperatureTarget: targetWaterTemperature)
         
         // Calibrate for the real world by applying empirically derived data for energy loss at a given temperature differential
         box.calibrateForMeasuredEnergyLoss(energyLoss: 38469, time: 600, externalTemperature: 27.4, internalTemperature: 60)
         
-        let simulator = Simulator(container: box, waterBody: waterBody, heater: heater)
+        let simulator = Simulator(container: box, waterBody: waterBody, heater: heater, heaterController: heaterController)
         
-        let results = simulator.simulate(timeStep: 1, duration: 60 * 60 * 24, externalTemperature: ambientTemperature)
+        let results = simulator.simulate(timeStep: 1, duration: 60 * 60 * 5, externalTemperature: ambientTemperature)
         
         self.plotView.simulationResults = results
     }
