@@ -124,12 +124,12 @@
 		84023A191D474B680078DF0D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8C77EA841D4E164B0066C811 /* CustomTypes.swift */,
 				840239EC1D4749F10078DF0D /* AppDelegate.swift */,
 				840239EE1D4749F10078DF0D /* ViewController.swift */,
 				84023A151D474B0A0078DF0D /* Models */,
 				84023A171D474B350078DF0D /* Simulator.swift */,
 				8C77EA821D4E04D20066C811 /* PlotView.swift */,
-				8C77EA841D4E164B0066C811 /* CustomTypes.swift */,
 				8C77EA861D4E18A50066C811 /* TemperatureDataPoint.swift */,
 			);
 			name = Classes;

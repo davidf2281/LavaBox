@@ -20,6 +20,7 @@ class TemperatureDataPoint : Equatable
     }
 }
 
-func ==(lhs: TemperatureDataPoint, rhs: TemperatureDataPoint) -> Bool {
+func ==(lhs: TemperatureDataPoint, rhs: TemperatureDataPoint) -> Bool
+{
     return lhs === rhs
 }
