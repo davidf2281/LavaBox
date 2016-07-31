@@ -20,6 +20,8 @@ class ViewController: NSViewController
     
     override func viewDidLoad()
     {
+        self.view.frame = NSScreen.main()!.frame
+        
         addPlotView()
         
         //********************************************
@@ -31,7 +33,7 @@ class ViewController: NSViewController
         
         let waterBody = WaterBody(length: 0.36, width: 0.26, height: 0.13, initialTemperature: initialWaterTemperature)
         
-        let box = Container(externalLength: 0.4, externalWidth: 0.297, externalHeight: 0.283, wallThickness: 0.02, thermalConductivity: 0.03)
+        let box = Container(externalLength: 0.4, externalWidth: 0.297, externalHeight: 0.283, wallThickness: 0.02, thermalConductivity: 0.037)
         
         let heater = Heater(maxOutputPower: heaterPower)
         
