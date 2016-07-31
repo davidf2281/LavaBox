@@ -31,16 +31,14 @@ class ViewController: NSViewController
         let heaterPower : Watts = 800;
         //********************************************
         
-        let waterBody = WaterBody(length: 0.36, width: 0.26, height: 0.13, initialTemperature: initialWaterTemperature)
-        
         let box = Container(externalLength: 0.4, externalWidth: 0.297, externalHeight: 0.283, wallThickness: 0.02, thermalConductivity: 0.037)
-        
-        let heater = Heater(maxOutputPower: heaterPower)
-        
-        let heaterController = HeaterController(heater: heater, temperatureTarget: targetWaterTemperature)
-        
         // Calibrate for the real world by applying empirically derived data for energy loss at a given temperature differential
         box.calibrateForMeasuredEnergyLoss(energyLoss: 38469, time: 600, externalTemperature: 27.4, internalTemperature: 60)
+        let heater = Heater(maxOutputPower: heaterPower)
+        
+        let waterBody = WaterBody(length: 0.36, width: 0.26, height: 0.13, initialTemperature: initialWaterTemperature)
+        
+        let heaterController = HeaterController(heater: heater, temperatureTarget: targetWaterTemperature)
         
         let simulator = Simulator(container: box, waterBody: waterBody, heater: heater, heaterController: heaterController)
         
