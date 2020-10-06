@@ -25,7 +25,7 @@ class ViewController: NSViewController
         addPlotView()
         
         
-        //************Simulation Parameters *************
+        //************ Simulation Parameters *************
         
         let ambientTemperature : Celsius       = 20
         let initialWaterTemperature : Celsius  = 18
@@ -38,7 +38,7 @@ class ViewController: NSViewController
                             wallThickness:       0.02,
                             thermalConductivity: 0.037)
         
-        //************************************************
+        //*************************************************
         
 
         // Calibrate for the real world by applying empirically derived data for energy loss at a given temperature differential
