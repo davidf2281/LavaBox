@@ -20,10 +20,10 @@ class PlotView: NSView
         
         // Fill background:
         NSColor(calibratedRed: 0.95, green: 0.95, blue: 0.95, alpha: 1).set()
-        NSRectFill(bounds)
+        bounds.fill()
         
         // Plot graph:
-        NSColor.red().set()
+        NSColor.red.set()
         if let simulationResults = self.simulationResults
         {
             let xStep = bounds.width / CGFloat(simulationResults.count)
@@ -37,7 +37,7 @@ class PlotView: NSView
                 
                 let point = CGRect(x: x, y: y, width: 2, height: 2)
                 
-                NSRectFill(point)
+                point.fill()
             }
         }
     }

@@ -20,7 +20,7 @@ class ViewController: NSViewController
     
     override func viewDidLoad()
     {
-        self.view.frame = NSScreen.main()!.frame
+        self.view.frame = NSScreen.main!.frame
         
         addPlotView()
         
@@ -57,8 +57,8 @@ class ViewController: NSViewController
         
         let views = ["plotView" : self.plotView]
         
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[plotView]-(200)-|", options:NSLayoutFormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[plotView]-(75)-|", options:NSLayoutFormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[plotView]-(200)-|", options:NSLayoutConstraint.FormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[plotView]-(75)-|", options:NSLayoutConstraint.FormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
     }
 }
 
