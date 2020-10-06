@@ -12,10 +12,17 @@ class Heater
 {
     private let maxOutputPower : Watts
     
-    private var outputPowerSetPoint : Watts
-    
     private var on : Bool
-
+    
+    var outputPowerSetPoint: Watts
+    {
+        didSet {
+            outputPowerSetPoint = (outputPowerSetPoint > self.maxOutputPower) ?
+                maxOutputPower :
+                (outputPowerSetPoint < 0) ? 0 : outputPowerSetPoint
+        }
+    }
+    
     var currentOutputPower : Watts
     {
         return self.on ? self.outputPowerSetPoint : 0
@@ -36,10 +43,5 @@ class Heater
     func switchOff()
     {
         self.on = false
-    }
-    
-    func setOutputPowerSetPoint(power: Watts)
-    {
-        self.outputPowerSetPoint = (power > self.maxOutputPower) ? self.maxOutputPower : (power < 0) ? 0 : power
     }
 }

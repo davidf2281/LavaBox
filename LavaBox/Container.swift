@@ -19,11 +19,11 @@ class Container
     
     /*
      The thermal conduction equation: Q/t = kA(T1 - T2)/d relies on what is effectively the
-     constant kA/d (a constant for any given container). Fudge factor is a coefficient that 
+     constant kA/d (a constant for any given container). Nudge factor is a coefficient that
      nudges the value of kA/d to match empirically derived values, 
      set via the calibrateForMeasuredEnergyLoss() function.
      */
-    private var fudgeFactor : Double = 1
+    private var nudgeFactor : Double = 1
     
     private var kAByD : Double
     {
@@ -57,12 +57,12 @@ class Container
         
         let fudgeFactor = empiricalPowerLoss / calculatedPowerLoss
         
-        self.fudgeFactor = fudgeFactor
+        self.nudgeFactor = fudgeFactor
     }
     
     func powerLoss(internalTemperature : Celsius, externalTemperature : Celsius) -> Watts
     {
-        // Return Q/t = kA(T1 - T2)/d = kA / d * (T1 - T2), compensated for by empirical fudge factor
-        return self.kAByD * (internalTemperature - externalTemperature) * self.fudgeFactor
+        // Return Q/t = kA(T1 - T2)/d = kA / d * (T1 - T2), compensated for by empirical nudge factor
+        return self.kAByD * (internalTemperature - externalTemperature) * self.nudgeFactor
     }
 }

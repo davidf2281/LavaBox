@@ -73,9 +73,8 @@ class Simulator
             currentTime = currentTime + timeStep
         }
 
-        print("Final temperature: \(self.waterBody.temperature)")
-        print("Average temperature: \(temperatureAveragingAccumulator / Double(loops))")
-        
+        print(String(format: "Final temperature: %.2f", self.waterBody.temperature))
+     
         self.heater.switchOff() // We mustn't waste energy
         
         return results

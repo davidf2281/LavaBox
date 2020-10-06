@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		840239ED1D4749F10078DF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840239EC1D4749F10078DF0D /* AppDelegate.swift */; };
 		840239EF1D4749F10078DF0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840239EE1D4749F10078DF0D /* ViewController.swift */; };
-		840239F11D4749F10078DF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840239F01D4749F10078DF0D /* Assets.xcassets */; };
 		840239F41D4749F10078DF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840239F21D4749F10078DF0D /* Main.storyboard */; };
-		840239FF1D4749F10078DF0D /* LavaBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840239FE1D4749F10078DF0D /* LavaBoxTests.swift */; };
 		84023A0E1D474AA90078DF0D /* Heater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84023A0D1D474AA90078DF0D /* Heater.swift */; };
 		84023A101D474AC80078DF0D /* WaterBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84023A0F1D474AC80078DF0D /* WaterBody.swift */; };
 		84023A121D474ADC0078DF0D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84023A111D474ADC0078DF0D /* Environment.swift */; };
@@ -23,26 +21,12 @@
 		8CB689F81D4CEF52001EA121 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB689F71D4CEF52001EA121 /* Container.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		840239FB1D4749F10078DF0D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 840239E11D4749F10078DF0D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 840239E81D4749F10078DF0D;
-			remoteInfo = LavaBox;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		840239E91D4749F10078DF0D /* LavaBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LavaBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840239EC1D4749F10078DF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840239EE1D4749F10078DF0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		840239F01D4749F10078DF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840239F31D4749F10078DF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		840239F51D4749F10078DF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		840239FA1D4749F10078DF0D /* LavaBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LavaBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		840239FE1D4749F10078DF0D /* LavaBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaBoxTests.swift; sourceTree = "<group>"; };
-		84023A001D4749F10078DF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84023A0D1D474AA90078DF0D /* Heater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heater.swift; sourceTree = "<group>"; };
 		84023A0F1D474AC80078DF0D /* WaterBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterBody.swift; sourceTree = "<group>"; };
 		84023A111D474ADC0078DF0D /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -62,13 +46,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		840239F71D4749F10078DF0D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				840239EB1D4749F10078DF0D /* LavaBox */,
-				840239FD1D4749F10078DF0D /* LavaBoxTests */,
 				840239EA1D4749F10078DF0D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				840239E91D4749F10078DF0D /* LavaBox.app */,
-				840239FA1D4749F10078DF0D /* LavaBoxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,27 +68,21 @@
 		840239EB1D4749F10078DF0D /* LavaBox */ = {
 			isa = PBXGroup;
 			children = (
-				84023A191D474B680078DF0D /* Classes */,
+				840239EE1D4749F10078DF0D /* ViewController.swift */,
+				84023A171D474B350078DF0D /* Simulator.swift */,
+				8C77EA841D4E164B0066C811 /* CustomTypes.swift */,
+				8C65F55F252C95900039C395 /* Outputs */,
+				8C65F559252C91130039C395 /* Inputs */,
+				84023A151D474B0A0078DF0D /* Models */,
 				84023A1B1D474BFE0078DF0D /* Misc */,
-				84023A1A1D474BE30078DF0D /* Storyboard */,
 			);
 			path = LavaBox;
-			sourceTree = "<group>";
-		};
-		840239FD1D4749F10078DF0D /* LavaBoxTests */ = {
-			isa = PBXGroup;
-			children = (
-				840239FE1D4749F10078DF0D /* LavaBoxTests.swift */,
-				84023A001D4749F10078DF0D /* Info.plist */,
-			);
-			path = LavaBoxTests;
 			sourceTree = "<group>";
 		};
 		84023A151D474B0A0078DF0D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				84023A0D1D474AA90078DF0D /* Heater.swift */,
-				8C3C2BD21D4E516000CE6E69 /* HeaterController.swift */,
 				84023A0F1D474AC80078DF0D /* WaterBody.swift */,
 				84023A111D474ADC0078DF0D /* Environment.swift */,
 				8CB689F71D4CEF52001EA121 /* Container.swift */,
@@ -121,35 +90,31 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		84023A191D474B680078DF0D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				8C77EA841D4E164B0066C811 /* CustomTypes.swift */,
-				840239EC1D4749F10078DF0D /* AppDelegate.swift */,
-				840239EE1D4749F10078DF0D /* ViewController.swift */,
-				84023A151D474B0A0078DF0D /* Models */,
-				84023A171D474B350078DF0D /* Simulator.swift */,
-				8C77EA821D4E04D20066C811 /* PlotView.swift */,
-				8C77EA861D4E18A50066C811 /* TemperatureDataPoint.swift */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		84023A1A1D474BE30078DF0D /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				840239F21D4749F10078DF0D /* Main.storyboard */,
-			);
-			name = Storyboard;
-			sourceTree = "<group>";
-		};
 		84023A1B1D474BFE0078DF0D /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				840239F01D4749F10078DF0D /* Assets.xcassets */,
+				840239EC1D4749F10078DF0D /* AppDelegate.swift */,
+				840239F21D4749F10078DF0D /* Main.storyboard */,
 				840239F51D4749F10078DF0D /* Info.plist */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		8C65F559252C91130039C395 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				8C3C2BD21D4E516000CE6E69 /* HeaterController.swift */,
+			);
+			name = Inputs;
+			sourceTree = "<group>";
+		};
+		8C65F55F252C95900039C395 /* Outputs */ = {
+			isa = PBXGroup;
+			children = (
+				8C77EA861D4E18A50066C811 /* TemperatureDataPoint.swift */,
+				8C77EA821D4E04D20066C811 /* PlotView.swift */,
+			);
+			name = Outputs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,24 +137,6 @@
 			productReference = 840239E91D4749F10078DF0D /* LavaBox.app */;
 			productType = "com.apple.product-type.application";
 		};
-		840239F91D4749F10078DF0D /* LavaBoxTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 84023A061D4749F10078DF0D /* Build configuration list for PBXNativeTarget "LavaBoxTests" */;
-			buildPhases = (
-				840239F61D4749F10078DF0D /* Sources */,
-				840239F71D4749F10078DF0D /* Frameworks */,
-				840239F81D4749F10078DF0D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				840239FC1D4749F10078DF0D /* PBXTargetDependency */,
-			);
-			name = LavaBoxTests;
-			productName = LavaBoxTests;
-			productReference = 840239FA1D4749F10078DF0D /* LavaBoxTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,11 +150,6 @@
 					840239E81D4749F10078DF0D = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
-					};
-					840239F91D4749F10078DF0D = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 840239E81D4749F10078DF0D;
 					};
 				};
 			};
@@ -225,7 +167,6 @@
 			projectRoot = "";
 			targets = (
 				840239E81D4749F10078DF0D /* LavaBox */,
-				840239F91D4749F10078DF0D /* LavaBoxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,15 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840239F11D4749F10078DF0D /* Assets.xcassets in Resources */,
 				840239F41D4749F10078DF0D /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		840239F81D4749F10078DF0D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,23 +201,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		840239F61D4749F10078DF0D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				840239FF1D4749F10078DF0D /* LavaBoxTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		840239FC1D4749F10078DF0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 840239E81D4749F10078DF0D /* LavaBox */;
-			targetProxy = 840239FB1D4749F10078DF0D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		840239F21D4749F10078DF0D /* Main.storyboard */ = {
@@ -435,35 +352,6 @@
 			};
 			name = Release;
 		};
-		84023A071D4749F10078DF0D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = LavaBoxTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidfearon.LavaBoxTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LavaBox.app/Contents/MacOS/LavaBox";
-			};
-			name = Debug;
-		};
-		84023A081D4749F10078DF0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = LavaBoxTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidfearon.LavaBoxTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LavaBox.app/Contents/MacOS/LavaBox";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -481,15 +369,6 @@
 			buildConfigurations = (
 				84023A041D4749F10078DF0D /* Debug */,
 				84023A051D4749F10078DF0D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		84023A061D4749F10078DF0D /* Build configuration list for PBXNativeTarget "LavaBoxTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				84023A071D4749F10078DF0D /* Debug */,
-				84023A081D4749F10078DF0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

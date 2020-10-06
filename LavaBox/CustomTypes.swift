@@ -6,6 +6,8 @@
 //  Copyright © 2016 David Fearon. All rights reserved.
 //
 
+import Foundation
+
 typealias Celsius = Double
 
 typealias Metres = Double
@@ -25,3 +27,5 @@ typealias JoulesPerKilogramKelvin = Double
 typealias Watts = Double
 
 typealias SimulationResults = [TemperatureDataPoint]
+
+typealias Seconds = TimeInterval

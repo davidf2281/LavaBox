@@ -24,15 +24,23 @@ class ViewController: NSViewController
         
         addPlotView()
         
-        //********************************************
-        let ambientTemperature : Celsius      = 20
-        let initialWaterTemperature : Celsius = 18
-        let targetWaterTemperature : Celsius  = 57.5
-        let heaterPower : Watts = 800;
-        //********************************************
         
-        let box = Container(externalLength: 0.4, externalWidth: 0.297, externalHeight: 0.283, wallThickness: 0.02, thermalConductivity: 0.037)
+        //************Simulation Parameters *************
         
+        let ambientTemperature : Celsius       = 20
+        let initialWaterTemperature : Celsius  = 18
+        let targetWaterTemperature : Celsius   = 57.5
+        let heaterPower : Watts                = 800;
+        let simulationDuration: Seconds        = 60 * 60
+        let box = Container(externalLength:      0.4,
+                            externalWidth:       0.297,
+                            externalHeight:      0.283,
+                            wallThickness:       0.02,
+                            thermalConductivity: 0.037)
+        
+        //************************************************
+        
+
         // Calibrate for the real world by applying empirically derived data for energy loss at a given temperature differential
         box.calibrateForMeasuredEnergyLoss(energyLoss: 38469, time: 600, externalTemperature: 27.4, internalTemperature: 60)
         
@@ -44,7 +52,7 @@ class ViewController: NSViewController
         
         let simulator = Simulator(container: box, waterBody: waterBody, heater: heater, heaterController: heaterController)
         
-        let results = simulator.simulate(timeStep: 1, duration: 60 * 60 * 2, externalTemperature: ambientTemperature)
+        let results = simulator.simulate(timeStep: 1, duration: simulationDuration, externalTemperature: ambientTemperature)
         
         self.plotView.simulationResults = results
     }
@@ -57,8 +65,8 @@ class ViewController: NSViewController
         
         let views = ["plotView" : self.plotView]
         
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[plotView]-(200)-|", options:NSLayoutConstraint.FormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
-        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[plotView]-(75)-|", options:NSLayoutConstraint.FormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[plotView]|", options:NSLayoutConstraint.FormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[plotView]|", options:NSLayoutConstraint.FormatOptions(rawValue: UInt(0)), metrics: nil, views: views))
     }
 }
 
