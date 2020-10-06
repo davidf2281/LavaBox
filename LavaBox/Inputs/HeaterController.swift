@@ -20,7 +20,7 @@ class HeaterController : SimulatorUpdateDelegate
         self.temperatureTarget = temperatureTarget
     }
     
-    func simulatorDidUpdateSimulationWithWaterTemperature(temperature: Watts, time: TimeInterval)
+    func simulatorDidUpdateSimulationWithWaterTemperature(temperature: Celsius, time: TimeInterval)
     {
         if temperature > self.temperatureTarget + 0.5
         {
