@@ -10,15 +10,15 @@
 		840239ED1D4749F10078DF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840239EC1D4749F10078DF0D /* AppDelegate.swift */; };
 		840239EF1D4749F10078DF0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840239EE1D4749F10078DF0D /* ViewController.swift */; };
 		840239F41D4749F10078DF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840239F21D4749F10078DF0D /* Main.storyboard */; };
-		84023A0E1D474AA90078DF0D /* Heater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84023A0D1D474AA90078DF0D /* Heater.swift */; };
-		84023A101D474AC80078DF0D /* WaterBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84023A0F1D474AC80078DF0D /* WaterBody.swift */; };
-		84023A121D474ADC0078DF0D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84023A111D474ADC0078DF0D /* Environment.swift */; };
 		84023A181D474B350078DF0D /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84023A171D474B350078DF0D /* Simulator.swift */; };
-		8C3C2BD31D4E516000CE6E69 /* HeaterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C2BD21D4E516000CE6E69 /* HeaterController.swift */; };
-		8C77EA831D4E04D20066C811 /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C77EA821D4E04D20066C811 /* PlotView.swift */; };
+		8C65F593252CA6710039C395 /* HeaterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F58A252CA6710039C395 /* HeaterController.swift */; };
+		8C65F594252CA6710039C395 /* TemperatureDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F58C252CA6710039C395 /* TemperatureDataPoint.swift */; };
+		8C65F595252CA6710039C395 /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F58D252CA6710039C395 /* PlotView.swift */; };
+		8C65F596252CA6710039C395 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F58F252CA6710039C395 /* Environment.swift */; };
+		8C65F597252CA6710039C395 /* WaterBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F590252CA6710039C395 /* WaterBody.swift */; };
+		8C65F598252CA6710039C395 /* Heater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F591252CA6710039C395 /* Heater.swift */; };
+		8C65F599252CA6710039C395 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F592252CA6710039C395 /* Container.swift */; };
 		8C77EA851D4E164B0066C811 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C77EA841D4E164B0066C811 /* CustomTypes.swift */; };
-		8C77EA871D4E18A50066C811 /* TemperatureDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C77EA861D4E18A50066C811 /* TemperatureDataPoint.swift */; };
-		8CB689F81D4CEF52001EA121 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB689F71D4CEF52001EA121 /* Container.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,15 +27,15 @@
 		840239EE1D4749F10078DF0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		840239F31D4749F10078DF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		840239F51D4749F10078DF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84023A0D1D474AA90078DF0D /* Heater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heater.swift; sourceTree = "<group>"; };
-		84023A0F1D474AC80078DF0D /* WaterBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterBody.swift; sourceTree = "<group>"; };
-		84023A111D474ADC0078DF0D /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		84023A171D474B350078DF0D /* Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
-		8C3C2BD21D4E516000CE6E69 /* HeaterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaterController.swift; sourceTree = "<group>"; };
-		8C77EA821D4E04D20066C811 /* PlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
+		8C65F58A252CA6710039C395 /* HeaterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaterController.swift; sourceTree = "<group>"; };
+		8C65F58C252CA6710039C395 /* TemperatureDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureDataPoint.swift; sourceTree = "<group>"; };
+		8C65F58D252CA6710039C395 /* PlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
+		8C65F58F252CA6710039C395 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		8C65F590252CA6710039C395 /* WaterBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterBody.swift; sourceTree = "<group>"; };
+		8C65F591252CA6710039C395 /* Heater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heater.swift; sourceTree = "<group>"; };
+		8C65F592252CA6710039C395 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		8C77EA841D4E164B0066C811 /* CustomTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
-		8C77EA861D4E18A50066C811 /* TemperatureDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureDataPoint.swift; sourceTree = "<group>"; };
-		8CB689F71D4CEF52001EA121 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,23 +71,12 @@
 				840239EE1D4749F10078DF0D /* ViewController.swift */,
 				84023A171D474B350078DF0D /* Simulator.swift */,
 				8C77EA841D4E164B0066C811 /* CustomTypes.swift */,
-				8C65F55F252C95900039C395 /* Outputs */,
-				8C65F559252C91130039C395 /* Inputs */,
-				84023A151D474B0A0078DF0D /* Models */,
+				8C65F589252CA6710039C395 /* Inputs */,
+				8C65F58E252CA6710039C395 /* Models */,
+				8C65F58B252CA6710039C395 /* Outputs */,
 				84023A1B1D474BFE0078DF0D /* Misc */,
 			);
 			path = LavaBox;
-			sourceTree = "<group>";
-		};
-		84023A151D474B0A0078DF0D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				84023A0D1D474AA90078DF0D /* Heater.swift */,
-				84023A0F1D474AC80078DF0D /* WaterBody.swift */,
-				84023A111D474ADC0078DF0D /* Environment.swift */,
-				8CB689F71D4CEF52001EA121 /* Container.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		84023A1B1D474BFE0078DF0D /* Misc */ = {
@@ -100,21 +89,32 @@
 			name = Misc;
 			sourceTree = "<group>";
 		};
-		8C65F559252C91130039C395 /* Inputs */ = {
+		8C65F589252CA6710039C395 /* Inputs */ = {
 			isa = PBXGroup;
 			children = (
-				8C3C2BD21D4E516000CE6E69 /* HeaterController.swift */,
+				8C65F58A252CA6710039C395 /* HeaterController.swift */,
 			);
-			name = Inputs;
+			path = Inputs;
 			sourceTree = "<group>";
 		};
-		8C65F55F252C95900039C395 /* Outputs */ = {
+		8C65F58B252CA6710039C395 /* Outputs */ = {
 			isa = PBXGroup;
 			children = (
-				8C77EA861D4E18A50066C811 /* TemperatureDataPoint.swift */,
-				8C77EA821D4E04D20066C811 /* PlotView.swift */,
+				8C65F58C252CA6710039C395 /* TemperatureDataPoint.swift */,
+				8C65F58D252CA6710039C395 /* PlotView.swift */,
 			);
-			name = Outputs;
+			path = Outputs;
+			sourceTree = "<group>";
+		};
+		8C65F58E252CA6710039C395 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C65F58F252CA6710039C395 /* Environment.swift */,
+				8C65F590252CA6710039C395 /* WaterBody.swift */,
+				8C65F591252CA6710039C395 /* Heater.swift */,
+				8C65F592252CA6710039C395 /* Container.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,16 +188,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C77EA851D4E164B0066C811 /* CustomTypes.swift in Sources */,
-				84023A0E1D474AA90078DF0D /* Heater.swift in Sources */,
+				8C65F596252CA6710039C395 /* Environment.swift in Sources */,
 				840239EF1D4749F10078DF0D /* ViewController.swift in Sources */,
-				8C77EA871D4E18A50066C811 /* TemperatureDataPoint.swift in Sources */,
-				8C3C2BD31D4E516000CE6E69 /* HeaterController.swift in Sources */,
+				8C65F595252CA6710039C395 /* PlotView.swift in Sources */,
+				8C65F598252CA6710039C395 /* Heater.swift in Sources */,
+				8C65F593252CA6710039C395 /* HeaterController.swift in Sources */,
 				840239ED1D4749F10078DF0D /* AppDelegate.swift in Sources */,
-				8C77EA831D4E04D20066C811 /* PlotView.swift in Sources */,
+				8C65F597252CA6710039C395 /* WaterBody.swift in Sources */,
 				84023A181D474B350078DF0D /* Simulator.swift in Sources */,
-				8CB689F81D4CEF52001EA121 /* Container.swift in Sources */,
-				84023A101D474AC80078DF0D /* WaterBody.swift in Sources */,
-				84023A121D474ADC0078DF0D /* Environment.swift in Sources */,
+				8C65F599252CA6710039C395 /* Container.swift in Sources */,
+				8C65F594252CA6710039C395 /* TemperatureDataPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
