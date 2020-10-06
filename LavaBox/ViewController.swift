@@ -30,7 +30,7 @@ class ViewController: NSViewController
         let ambientTemperature : Celsius       = 20
         let initialWaterTemperature : Celsius  = 18
         let targetWaterTemperature : Celsius   = 57.5
-        let heaterPower : Watts                = 800;
+        let heaterPower : Watts                = 800
         let simulationDuration: Seconds        = 60 * 60
         let box = Container(externalLength:      0.4,
                             externalWidth:       0.297,
