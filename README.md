@@ -9,9 +9,9 @@ Lavabox was written in 2016 purely as an experiment and doesn’t follow any par
 It turned out to be a nice little demonstrator of Swift code-clarity, with little things like `typealias` making the code more or less self-documenting, eg:
 
 ```
-    private let specificHeatCapacity : JoulesPerKilogramKelvin = 4181
+    private let specificHeatCapacity: JoulesPerKilogramKelvin = 4181
     
-    func temperatureChangeForInputEnergy(inputEnergy : Joules) -> Celsius
+    func temperatureChangeForInputEnergy(inputEnergy: Joules) -> Celsius
     {
         return inputEnergy / (self.mass * self.specificHeatCapacity)
     }
