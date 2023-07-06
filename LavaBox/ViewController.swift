@@ -10,7 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController
 {
-    let plotView : PlotView
+    private let plotView : PlotView
     
     required init?(coder: NSCoder)
     {
@@ -57,7 +57,7 @@ class ViewController: NSViewController
         self.plotView.simulationResults = results
     }
     
-    func addPlotView()
+    private func addPlotView()
     {
         self.plotView.translatesAutoresizingMaskIntoConstraints = false
         

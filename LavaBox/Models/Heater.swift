@@ -12,7 +12,7 @@ class Heater
 {
     private let maxOutputPower : Watts
     
-    private var on : Bool
+    private(set) var on : Bool
     
     var outputPowerSetPoint: Watts
     {

@@ -55,9 +55,9 @@ class Container
         
         let calculatedPowerLoss = self.powerLoss(internalTemperature: internalTemperature, externalTemperature: externalTemperature)
         
-        let fudgeFactor = empiricalPowerLoss / calculatedPowerLoss
+        let nudgeFactor = empiricalPowerLoss / calculatedPowerLoss
         
-        self.nudgeFactor = fudgeFactor
+        self.nudgeFactor = nudgeFactor
     }
     
     func powerLoss(internalTemperature : Celsius, externalTemperature : Celsius) -> Watts

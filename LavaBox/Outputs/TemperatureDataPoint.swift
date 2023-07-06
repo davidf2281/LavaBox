@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class TemperatureDataPoint : Equatable
+struct TemperatureDataPoint : Equatable
 {
     var time : TimeInterval
     var temperature : Celsius
@@ -18,9 +18,4 @@ class TemperatureDataPoint : Equatable
         self.time = time
         self.temperature = temperature
     }
-}
-
-func ==(lhs: TemperatureDataPoint, rhs: TemperatureDataPoint) -> Bool
-{
-    return lhs === rhs
 }

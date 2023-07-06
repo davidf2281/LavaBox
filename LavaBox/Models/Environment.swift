@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Environment
+struct Environment
 {
     let ambientTemperature : Celsius
     

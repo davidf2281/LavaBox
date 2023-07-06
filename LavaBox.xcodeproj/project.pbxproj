@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,7 @@
 		8C65F599252CA6710039C395 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F592252CA6710039C395 /* Container.swift */; };
 		8C65F5A1252CA7580039C395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C65F5A0252CA7580039C395 /* AppDelegate.swift */; };
 		8C65F5B0252CA9BC0039C395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C65F5AE252CA9BC0039C395 /* Main.storyboard */; };
-		8C77EA851D4E164B0066C811 /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C77EA841D4E164B0066C811 /* CustomTypes.swift */; };
+		8C77EA851D4E164B0066C811 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C77EA841D4E164B0066C811 /* TypeAliases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		8C65F59C252CA71B0039C395 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Misc/Info.plist; sourceTree = "<group>"; };
 		8C65F5A0252CA7580039C395 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Misc/AppDelegate.swift; sourceTree = "<group>"; };
 		8C65F5AF252CA9BC0039C395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Misc/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8C77EA841D4E164B0066C811 /* CustomTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
+		8C77EA841D4E164B0066C811 /* TypeAliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			children = (
 				840239EE1D4749F10078DF0D /* ViewController.swift */,
 				84023A171D474B350078DF0D /* Simulator.swift */,
-				8C77EA841D4E164B0066C811 /* CustomTypes.swift */,
+				8C77EA841D4E164B0066C811 /* TypeAliases.swift */,
 				8C65F589252CA6710039C395 /* Inputs */,
 				8C65F58E252CA6710039C395 /* Models */,
 				8C65F58B252CA6710039C395 /* Outputs */,
@@ -143,8 +143,9 @@
 		840239E11D4749F10078DF0D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "David Fearon";
 				TargetAttributes = {
 					840239E81D4749F10078DF0D = {
@@ -188,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C65F5A1252CA7580039C395 /* AppDelegate.swift in Sources */,
-				8C77EA851D4E164B0066C811 /* CustomTypes.swift in Sources */,
+				8C77EA851D4E164B0066C811 /* TypeAliases.swift in Sources */,
 				8C65F596252CA6710039C395 /* Environment.swift in Sources */,
 				840239EF1D4749F10078DF0D /* ViewController.swift in Sources */,
 				8C65F595252CA6710039C395 /* PlotView.swift in Sources */,
@@ -247,6 +248,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -305,6 +307,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -329,8 +332,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = LavaBox/Misc/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidfearon.LavaBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -343,11 +351,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = LavaBox/Misc/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidfearon.LavaBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

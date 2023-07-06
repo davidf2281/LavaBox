@@ -39,7 +39,7 @@ class Simulator
         
         var temperatureAveragingAccumulator : Celsius = 0
         
-        var loops : Int = 0
+        var iterations : Int = 0
         
         self.heater.switchOn()
 
@@ -68,7 +68,7 @@ class Simulator
             self.delegate.simulatorDidUpdateSimulationWithWaterTemperature(temperature: self.waterBody.temperature, time: currentTime)
             
             // 6: Prepare for next iteration
-            loops += 1
+            iterations += 1
             temperatureAveragingAccumulator += finalTemperature
             currentTime = currentTime + timeStep
         }

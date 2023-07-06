@@ -10,7 +10,7 @@ import Cocoa
 
 class HeaterController : SimulatorUpdateDelegate
 {
-    var temperatureTarget : Celsius
+    private var temperatureTarget : Celsius
 
     private let heater : Heater
     
